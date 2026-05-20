@@ -5,10 +5,17 @@ Mi proyecto consiste en un sistema básico para administrar un gimnasio. El sist
 La clase Cliente se relaciona con Membresia porque cada cliente debe contar con una membresía activa. También se relaciona con Rutina, ya que el cliente puede tener una rutina asignada según su objetivo físico. La clase Entrenador se encarga de asignar rutinas a los clientes.
 
 Casos donde el proyecto puede dejar de funcionar:
+
 Edad ≤ 0
+
 Peso o altura negativos
+
 IMC con altura = 0
+
 Rutina inexistente
+
 Membresía inválida
+
 IDs repetidos
+
 Cliente no registrado
