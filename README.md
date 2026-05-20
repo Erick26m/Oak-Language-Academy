@@ -6,9 +6,8 @@ La clase Cliente se relaciona con Membresia porque cada cliente debe contar con 
 
 Casos donde el proyecto puede dejar de funcionar:
 
-Edad ≤ 0
-
-Peso o altura negativos
+#Edad ≤ 0
+#Peso o altura negativos
 
 IMC con altura = 0
 
