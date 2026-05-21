@@ -9,10 +9,10 @@ La clase Cliente se relaciona con Membresia porque cada cliente debe contar con 
 
 El programa permite administrar la información principal de un gimnasio:
 
-- clientes
-- entrenadores
-- membresías
-- rutinas
+- Clientes
+- Entrenadores
+- Membresías
+- Rutinas
 
 Consta de un menú con opciones iniciales y corre sobre consola.
 
