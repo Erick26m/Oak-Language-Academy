@@ -1,5 +1,5 @@
-#ifndef UNTITLED3_PERSONA_H
-#define UNTITLED3_PERSONA_H
+#ifndef PERSONA_H
+#define PERSONA_H
 #include <iostream>
 #include <string>
 using namespace std;
@@ -26,4 +26,4 @@ public:
         cout << "ID: " << id << endl;
     }
 };
-#endif //UNTITLED3_PERSONA_H
+#endif //PERSONA_H
