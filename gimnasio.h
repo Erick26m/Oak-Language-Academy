@@ -15,7 +15,7 @@ private:
     int duracionDias;
 
 public:
-    Membresia() : tipo("Sin membresia"), costo(0), duracionDias(0) {}
+    Membresia() : tipo("Sin membresia"), costo(0), duracionDias(0) {}//Constructor por default
 
     Membresia(string tip, float cos, int duracion)
         : tipo(tip), costo(cos), duracionDias(duracion) {}
