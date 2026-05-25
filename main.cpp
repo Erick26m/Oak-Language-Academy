@@ -1,26 +1,36 @@
-#include <iostream>
-#include "persona.h"
-using namespace std;
+#include "cliente.h"
+#include "entrenador.h"
 
-int main() {
+int main(){
 
-    Membresia mem1("Premium", 850, 30);
-    Rutina rutina1("Full Body", "Ganar musculo", 60, "Media");
+    Membresia mem1("Premium",850,30);
 
-    Cliente cliente1("Armando", 19, 101, 75.5, 1.72, "Ganar musculo", mem1);
-    Entrenador entrenador1("Erick", 30, 201, "Hipertrofia", 5);
+    Rutina r1("Full Body",
+              "Ganar musculo",
+              60,
+              "Media");
 
-    entrenador1.asignarRutina(cliente1, rutina1);
+    Cliente c1("Armando",
+               19,
+               1,
+               75,
+               1.75,
+               "Musculo",
+               mem1);
 
-    cliente1.mostrarDatos();
+    Entrenador e1("Erick",
+                  28,
+                  2,
+                  "Hipertrofia",
+                  5);
 
-    cout << "\n\n" << endl;
+    e1.asignarRutina(c1,r1);
 
-    entrenador1.mostrarDatos();
+    c1.mostrarDatos();
 
-    cout << "\n\n" << endl;
+    cout<<endl;
 
-    // Ejemplo de sobrecarga
-    entrenador1.asignarRutina(cliente1, "Cardio intenso", "Bajar grasa");
+    e1.mostrarDatos();
+
     return 0;
 }
