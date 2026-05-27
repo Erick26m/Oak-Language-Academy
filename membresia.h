@@ -19,13 +19,8 @@ public:
     Membresia(string tipo, float costo, int duracionDias);
 
     string getTipo();
-    void setTipo(string tipo);
-
     float getCosto();
-    void setCosto(float costo);
-
     int getDuracionDias();
-    void setDuracionDias(int duracionDias);
 
     float calcularCosto();
     string obtenerDescripcion();
@@ -41,24 +36,12 @@ string Membresia::getTipo() {
     return tipo;
 }
 
-void Membresia::setTipo(string tipo) {
-    this->tipo = tipo;
-}
-
 float Membresia::getCosto() {
     return costo;
 }
 
-void Membresia::setCosto(float costo) {
-    this->costo = costo;
-}
-
 int Membresia::getDuracionDias() {
     return duracionDias;
-}
-
-void Membresia::setDuracionDias(int duracionDias) {
-    this->duracionDias = duracionDias;
 }
 
 float Membresia::calcularCosto() {
@@ -66,6 +49,6 @@ float Membresia::calcularCosto() {
 }
 
 string Membresia::obtenerDescripcion() {
-    return tipo + "$" + to_string(costo) + "  " + to_string(duracionDias) + " dias";
+    return tipo + " | $" + to_string(costo) + " | " + to_string(duracionDias) + " dias";
 }
 #endif //UNTITLED4_MEMBRESIA_H
