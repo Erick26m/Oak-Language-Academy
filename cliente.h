@@ -85,9 +85,9 @@ void Cliente::asignarRutina(string nombreRutina, string objetivoRutina) {
 
 string Cliente::obtenerResumen() {
     return "Cliente: " + nombre +
-           " | Objetivo: " + objetivo +
-           " | IMC: " + to_string(calcularIMC()) +
-           " | Membresia: " + membresia.getTipo() +
-           " | Rutina: " + rutina.getNombre();
+           "  Objetivo: " + objetivo +
+           "  IMC: " + to_string(calcularIMC()) +
+           "  Membresia: " + membresia.getTipo() +
+           "  Rutina: " + rutina.getNombre();
 }
 #endif //UNTITLED4_CLIENTE_H
