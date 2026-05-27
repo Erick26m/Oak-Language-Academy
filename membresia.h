@@ -49,6 +49,6 @@ float Membresia::calcularCosto() {
 }
 
 string Membresia::obtenerDescripcion() {
-    return tipo + " | $" + to_string(costo) + " | " + to_string(duracionDias) + " dias";
+    return tipo + "  $" + to_string(costo) + "  " + to_string(duracionDias) + " dias";
 }
 #endif //UNTITLED4_MEMBRESIA_H
