@@ -8,76 +8,108 @@
 #include "membresia.h"
 #include "rutina.h"
 
-class Cliente : public Persona{
-
+class Cliente : public Persona {
 private:
-
     float peso;
     float altura;
     string objetivo;
-
     Membresia membresia;
     Rutina rutina;
 
 public:
+    Cliente();
+    Cliente(string nombre, int edad, int id, float peso, float altura, string objetivo, Membresia membresia);
 
-    Cliente()
-    : Persona(), peso(0), altura(0), objetivo(""){}
+    float getPeso();
+    void setPeso(float peso);
 
-    Cliente(string nom,int ed,int ident,float pes,float alt,
-             string obj,Membresia mem)
+    float getAltura();
+    void setAltura(float altura);
 
-    : Persona(nom,ed,ident),
-      peso(pes),
-      altura(alt),
-      objetivo(obj),
-      membresia(mem){}
+    string getObjetivo();
+    void setObjetivo(string objetivo);
 
-    float calcularIMC(){
+    Membresia getMembresia();
+    void setMembresia(Membresia membresia);
 
-        if(altura<=0){
+    Rutina getRutina();
+    void setRutina(Rutina rutina);
 
-            return 0;
+    float calcularIMC();
 
-        }
+    void asignarRutina(Rutina rutina);
+    void asignarRutina(string nombreRutina, string objetivoRutina);
 
-        return peso/(altura*altura);
-
-    }
-
-    void asignarRutina(Rutina r){
-
-        rutina=r;
-
-    }
-
-    // Sobrecarga
-
-    void asignarRutina(string nombreRutina,string objetivoRutina){
-
-        rutina=Rutina(nombreRutina,
-                        objetivoRutina,
-                        45,
-                        "Media");
-
-    }
-
-    void mostrarDatos() override{
-
-        cout<<"Cliente"<<endl;
-
-        cout<<"Nombre: "<<nombre<<endl;
-        cout<<"Edad: "<<edad<<endl;
-        cout<<"ID: "<<id<<endl;
-        cout<<"Peso: "<<peso<<endl;
-        cout<<"Altura: "<<altura<<endl;
-        cout<<"Objetivo: "<<objetivo<<endl;
-
-        membresia.mostrarMembresia();
-
-        rutina.mostrarRutina();
-
-    }
-
+    string obtenerResumen() override;
 };
+
+Cliente::Cliente()
+    : Persona(), peso(0), altura(0), objetivo("") {}
+
+Cliente::Cliente(string nombre, int edad, int id, float peso, float altura, string objetivo, Membresia membresia)
+    : Persona(nombre, edad, id), peso(peso), altura(altura), objetivo(objetivo), membresia(membresia) {}
+
+float Cliente::getPeso() {
+    return peso;
+}
+
+void Cliente::setPeso(float peso) {
+    this->peso = peso;
+}
+
+float Cliente::getAltura() {
+    return altura;
+}
+
+void Cliente::setAltura(float altura) {
+    this->altura = altura;
+}
+
+string Cliente::getObjetivo() {
+    return objetivo;
+}
+
+void Cliente::setObjetivo(string objetivo) {
+    this->objetivo = objetivo;
+}
+
+Membresia Cliente::getMembresia() {
+    return membresia;
+}
+
+void Cliente::setMembresia(Membresia membresia) {
+    this->membresia = membresia;
+}
+
+Rutina Cliente::getRutina() {
+    return rutina;
+}
+
+void Cliente::setRutina(Rutina rutina) {
+    this->rutina = rutina;
+}
+
+float Cliente::calcularIMC() {
+    if (altura <= 0) {
+        return 0;
+    }
+
+    return peso / (altura * altura);
+}
+
+void Cliente::asignarRutina(Rutina rutina) {
+    this->rutina = rutina;
+}
+
+void Cliente::asignarRutina(string nombreRutina, string objetivoRutina) {
+    rutina = Rutina(nombreRutina, objetivoRutina, 45, "Media");
+}
+
+string Cliente::obtenerResumen() {
+    return "Cliente: " + nombre +
+           "  Objetivo: " + objetivo +
+           "  IMC: " + to_string(calcularIMC()) +
+           "  Membresia: " + membresia.getTipo() +
+           "  Rutina: " + rutina.getNombre();
+}
 #endif //UNTITLED4_CLIENTE_H
