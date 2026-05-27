@@ -48,6 +48,6 @@ string Rutina::getDificultad() {
 }
 
 string Rutina::obtenerDescripcion() {
-    return nombre + " | Objetivo: " + objetivo + " | " + to_string(duracionMin) + " min | " + dificultad;
+    return nombre + "  Objetivo: " + objetivo + "  " + to_string(duracionMin) + " min  " + dificultad;
 }
 #endif //UNTITLED4_RUTINA_H
