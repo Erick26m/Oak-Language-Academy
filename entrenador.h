@@ -20,7 +20,6 @@ public:
     void setEspecialidad(string especialidad);
 
     int getAniosExperiencia();
-    void setAniosExperiencia(int aniosExperiencia);
 
     void asignarRutina(Cliente &cliente, Rutina rutina);
     void asignarRutina(Cliente &cliente, string nombreRutina, string objetivoRutina);
@@ -46,10 +45,6 @@ int Entrenador::getAniosExperiencia() {
     return aniosExperiencia;
 }
 
-void Entrenador::setAniosExperiencia(int aniosExperiencia) {
-    this->aniosExperiencia = aniosExperiencia;
-}
-
 void Entrenador::asignarRutina(Cliente &cliente, Rutina rutina) {
     cliente.asignarRutina(rutina);
 }
@@ -60,7 +55,7 @@ void Entrenador::asignarRutina(Cliente &cliente, string nombreRutina, string obj
 
 string Entrenador::obtenerResumen() {
     return "Entrenador: " + nombre +
-           "  Especialidad: " + especialidad +
-           "  Experiencia: " + to_string(aniosExperiencia) + " anios";
+           " | Especialidad: " + especialidad +
+           " | Experiencia: " + to_string(aniosExperiencia) + " anios";
 }
 #endif //UNTITLED4_ENTRENADOR_H
