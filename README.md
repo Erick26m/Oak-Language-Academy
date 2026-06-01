@@ -16,7 +16,7 @@ Por otro lado, la clase Entrenador representa al personal encargado de diseñar 
 
 La clase Membresia administra la información relacionada con los distintos planes ofrecidos por el gimnasio, incluyendo el tipo de membresía, costo y duración. Esta información es utilizada por los clientes para determinar las características de su acceso al servicio.
 
-La clase Rutina gestiona los planes de entrenamiento asignados a los clientes. En ella se almacena información como el nombre de la rutina, el objetivo principal, la duración y el nivel de dificultad. Esto permite adaptar los entrenamientos a las necesidades específicas de cada usuario.
+La clase Rutina gestiona los planes de entrenamiento asignados a los clientes. En ella se almacena información como el nombre de la rutina, el objetivo principal, la duración y el nivel de dificultad. Esto permite adaptar los entrenamientos a las necesidades específicas de cada cliente.
 
 Un aspecto importante del proyecto es la implementación del polimorfismo mediante la clase abstracta Persona. Gracias al uso de métodos virtuales puros y punteros de la clase base, es posible almacenar objetos de tipo Cliente y Entrenador dentro de una misma estructura y ejecutar automáticamente el comportamiento correspondiente de cada clase derivada. Esto permite que el sistema sea más flexible y escalable ante futuras ampliaciones.
 
