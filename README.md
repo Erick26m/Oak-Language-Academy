@@ -23,6 +23,4 @@ Casos donde el proyecto podría dejar de funcionar:
 - Registrar un cliente con edad menor o igual a 0
 - Registrar peso o altura negativos
 - Calcular el IMC con altura igual a 0
-- Asignar una rutina inexistente
-- Asignar una membresía inexistente
 - Registrar dos personas con el mismo ID
