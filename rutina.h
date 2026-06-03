@@ -1,53 +1,60 @@
 //
 // Created by munoz on 25/05/2026.
 //
-#ifndef UNTITLED4_RUTINA_H
-#define UNTITLED4_RUTINA_H
+#ifndef UNTITLED4_CURSO_H
+#define UNTITLED4_CURSO_H
 #include <iostream>
 #include <string>
+
 using namespace std;
-class Rutina {
+
+class Curso {
 private:
     string nombre;
     string objetivo;
-    int duracionMin;
-    string dificultad;
+    int duracionHoras;
+    string nivel;
 
 public:
-    Rutina();
-    Rutina(string nombre, string objetivo, int duracionMin, string dificultad);
+    Curso();
+    Curso(string nombre, string objetivo, int duracionHoras, string nivel);
 
     string getNombre();
     string getObjetivo();
-    int getDuracionMin();
-    string getDificultad();
+    int getDuracionHoras();
+    string getNivel();
 
     string obtenerDescripcion();
 };
 
-Rutina::Rutina()
-    : nombre("Sin rutina"), objetivo("Sin objetivo"), duracionMin(0), dificultad("Sin dificultad") {}
+// IMPLEMENTACIONES
 
-Rutina::Rutina(string nombre, string objetivo, int duracionMin, string dificultad)
-    : nombre(nombre), objetivo(objetivo), duracionMin(duracionMin), dificultad(dificultad) {}
+Curso::Curso()
+    : nombre("Sin curso"), objetivo("Sin objetivo"), duracionHoras(0), nivel("Sin nivel") {}
 
-string Rutina::getNombre() {
+Curso::Curso(string nombre, string objetivo, int duracionHoras, string nivel)
+    : nombre(nombre), objetivo(objetivo), duracionHoras(duracionHoras), nivel(nivel) {}
+
+string Curso::getNombre() {
     return nombre;
 }
 
-string Rutina::getObjetivo() {
+string Curso::getObjetivo() {
     return objetivo;
 }
 
-int Rutina::getDuracionMin() {
-    return duracionMin;
+int Curso::getDuracionHoras() {
+    return duracionHoras;
 }
 
-string Rutina::getDificultad() {
-    return dificultad;
+string Curso::getNivel() {
+    return nivel;
 }
 
-string Rutina::obtenerDescripcion() {
-    return nombre + "  Objetivo: " + objetivo + "  " + to_string(duracionMin) + " min  " + dificultad;
+string Curso::obtenerDescripcion() {
+    return nombre +
+           "  Objetivo: " + objetivo +
+           "  Duracion: " + to_string(duracionHoras) + " horas" +
+           "  Nivel: " + nivel;
 }
 #endif //UNTITLED4_RUTINA_H
