@@ -24,8 +24,12 @@ La clase Curso representa los cursos ofrecidos por la academia. En ella se almac
 ## Consideraciones
 Casos donde el proyecto podría dejar de funcionar:
 
--Registrar una persona con edad menor o igual a 0.
--Registrar dos personas con la misma matrícula.
--Crear una inscripción con costo negativo.
--Crear una inscripción con duración menor o igual a 0.
--Asignar un curso inexistente a un estudiante.
+Registrar una persona con edad menor o igual a 0.
+
+Registrar dos personas con la misma matrícula.
+
+Crear una inscripción con costo negativo.
+
+Crear una inscripción con duración menor o igual a 0.
+
+Asignar un curso inexistente a un estudiante.
