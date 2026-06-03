@@ -5,7 +5,7 @@ Mi proyecto consiste en un sistema básico para administrar una academia de idio
 
 La idea principal del sistema es simular cómo una academia puede registrar estudiantes, asociarlos a una inscripción, asignarles cursos y mostrar información general de las personas que forman parte de la institución.
 
-Funcionalidad
+ ## Diagrama UML
 <img width="1027" height="810" alt="image" src="https://github.com/user-attachments/assets/19c98042-3252-45e1-aba4-dc46f4d73c37" />
 
 ## Funcionalidad
