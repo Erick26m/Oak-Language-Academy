@@ -46,11 +46,9 @@ public:
 
     string getMatricula();
 
-    // Método virtual puro (Clase abstracta)
+    //Método virtual puro. Obliga a las clases hijas a definir su propio resumen.
     virtual string obtenerResumen() = 0;
 };
-
-// IMPLEMENTACIONES
 
 Persona::Persona()
     : nombre(""), edad(0), matricula("") {}
