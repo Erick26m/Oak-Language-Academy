@@ -117,7 +117,7 @@ int main() {
     personas[2] = estudiante3;
     personas[3] = profesor1;
 
-    cout << "Prepa UCO" << endl;
+    cout << "Oak-Language-Academy" << endl;
     cout << endl;
 
     for(int i = 0; i < 4; i++) {
