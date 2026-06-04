@@ -1,6 +1,21 @@
 //
 // Created by munoz on 25/05/2026.
 //
+/*
+Clase Estudiante
+
+Esta clase representa a los alumnos inscritos en la academia.
+Hereda de Persona porque un estudiante también tiene nombre, edad y matrícula.
+
+Relación con otras clases:
+- Hereda de Persona.
+- Tiene una Inscripcion.
+- Tiene un Curso asignado.
+- Puede recibir cursos asignados por un Profesor.
+
+Esta clase agrega información propia del estudiante, como promedio,
+nivel académico y meta académica.
+*/
 
 #ifndef UNTITLED4_ESTUDIANTE_H
 #define UNTITLED4_ESTUDIANTE_H
