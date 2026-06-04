@@ -1,6 +1,20 @@
 //
 // Created by munoz on 25/05/2026.
 //
+/*
+Clase Profesor
+
+Esta clase representa a los profesores de la academia.
+Hereda de Persona porque un profesor también tiene nombre y edad.
+
+Relación con otras clases:
+- Hereda de Persona.
+- Se relaciona con Estudiante porque puede asignarle cursos.
+- Se relaciona con Curso porque utiliza objetos Curso para hacer asignaciones.
+
+Esta clase agrega información propia del profesor, como el idioma que enseña
+y sus años de experiencia.
+*/
 #ifndef UNTITLED4_PROFESOR_H
 #define UNTITLED4_PROFESOR_H
 #include "persona.h"
