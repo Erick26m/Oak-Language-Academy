@@ -1,7 +1,20 @@
 //
 // Created by munoz on 25/05/2026.
 //
+/*
+Clase Inscripcion
 
+Esta clase representa el tipo de inscripción que tiene un estudiante
+dentro de la academia de idiomas.
+
+Relación con otras clases:
+- Estudiante contiene un objeto de tipo Inscripcion.
+- Esto permite que cada estudiante tenga asociado un plan académico,
+  con tipo, costo y duración.
+
+La inscripción se maneja como una clase separada para no guardar esos datos
+directamente dentro de Estudiante y mantener mejor organizada la información.
+*/
 #ifndef UNTITLED4_INSCRIPCION_H
 #define UNTITLED4_INSCRIPCION_H
 #include <iostream>
