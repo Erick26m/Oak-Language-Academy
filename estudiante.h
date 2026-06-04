@@ -52,16 +52,14 @@ public:
     void setMetaAcademica(string metaAcademica);
 
     float calcularPromedio();
-
+// Asigna un curso completo al estudiante usando un objeto Curso.
     void asignarCurso(Curso curso);
 
-    // Sobrecarga de metodo
+// Sobrecarga de método: asigna un curso usando solo nombre y objetivo.
     void asignarCurso(string nombreCurso, string objetivoCurso);
 
     string obtenerResumen() override;
 };
-
-// IMPLEMENTACIONES
 
 Estudiante::Estudiante()
     : Persona(),
