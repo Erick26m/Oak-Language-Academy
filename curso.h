@@ -39,8 +39,6 @@ public:
     string obtenerDescripcion();
 };
 
-// IMPLEMENTACIONES
-
 Curso::Curso()
     : nombre("Sin curso"), objetivo("Sin objetivo"), duracionHoras(0), nivel("Sin nivel") {}
 
