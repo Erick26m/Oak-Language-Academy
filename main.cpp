@@ -96,7 +96,6 @@ int main() {
 
     // Sobrecarga de metodo:
     // Aqui se asigna un curso usando solo nombre y objetivo,
-    // no un objeto Curso completo.
     profesor1->asignarCurso(
         *estudiante3,
         "Curso de conversacion avanzada",
