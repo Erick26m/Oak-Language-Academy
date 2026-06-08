@@ -56,7 +56,7 @@ int main() {
     Estudiante* estudiante1 = new Estudiante(
         "Armando",
         19,
-        "LH001",
+        "A0001",
         95,
         "B1",
         "Certificacion TOEFL",
@@ -66,7 +66,7 @@ int main() {
     Estudiante* estudiante2 = new Estudiante(
         "Luis",
         20,
-        "LH002",
+        "A0002",
         88,
         "A1",
         "Aprender frances desde cero",
@@ -76,7 +76,7 @@ int main() {
     Estudiante* estudiante3 = new Estudiante(
         "David",
         21,
-        "LH003",
+        "A0003",
         92,
         "B2",
         "Intercambio academico",
@@ -86,7 +86,7 @@ int main() {
     Profesor* profesor1 = new Profesor(
         "Erick",
         30,
-        "P001",
+        "A001",
         "Ingles",
         5
     );
