@@ -6,7 +6,8 @@ Mi proyecto consiste en un sistema básico para administrar una academia de idio
 La idea principal del sistema es simular cómo una academia puede registrar estudiantes, asociarlos a una inscripción, asignarles cursos y mostrar información general de las personas que forman parte de la institución.
 
  ## Diagrama UML
-<img width="1027" height="810" alt="image" src="https://github.com/user-attachments/assets/19c98042-3252-45e1-aba4-dc46f4d73c37" />
+<img width="1067" height="812" alt="image" src="https://github.com/user-attachments/assets/ef940fff-9125-49a9-9189-fcdda48aed40" />
+
 
 ## Funcionalidad
 El sistema Oak Language Academy está compuesto por 5 clases principales que mantienen relaciones claras entre sí: Persona, Estudiante, Profesor, Inscripcion y Curso.
