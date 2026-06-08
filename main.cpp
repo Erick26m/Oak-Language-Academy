@@ -96,11 +96,7 @@ int main() {
 
     // Sobrecarga de metodo:
     // Aqui se asigna un curso usando solo nombre y objetivo,
-    profesor1->asignarCurso(
-        *estudiante3,
-        "Curso de conversacion avanzada",
-        "Mejorar fluidez oral"
-    );
+    profesor1->asignarCurso(*estudiante3,"Curso de conversacion avanzada","Mejorar fluidez oral");
 
     // Aplicacion de polimorfismo:
     // Se crea un arreglo de apuntadores de tipo Persona.
