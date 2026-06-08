@@ -35,7 +35,7 @@ public:
     Persona();
     Persona(string nombre, int edad, string matricula);
 
-    // Destructor virtual para polimorfismo
+    // Destructor virtual
     virtual ~Persona() = default;
 
     string getNombre();
