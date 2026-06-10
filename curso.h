@@ -23,48 +23,38 @@ using namespace std;
 class Curso {
 private:
     string nombre;
-    string objetivo;
     int duracionHoras;
-    string nivel;
 
 public:
     Curso();
-    Curso(string nombre, string objetivo, int duracionHoras, string nivel);
+    Curso(string nombre, int duracionHoras);
 
     string getNombre();
-    string getObjetivo();
     int getDuracionHoras();
-    string getNivel();
 
     string obtenerDescripcion();
 };
 
-Curso::Curso()
-    : nombre("Sin curso"), objetivo("Sin objetivo"), duracionHoras(0), nivel("Sin nivel") {}
+Curso::Curso() {
+    nombre = "Sin_curso";
+    duracionHoras = 0;
+}
 
-Curso::Curso(string nombre, string objetivo, int duracionHoras, string nivel)
-    : nombre(nombre), objetivo(objetivo), duracionHoras(duracionHoras), nivel(nivel) {}
+Curso::Curso(string nombre, int duracionHoras) {
+    this->nombre = nombre;
+    this->duracionHoras = duracionHoras;
+}
 
 string Curso::getNombre() {
     return nombre;
-}
-
-string Curso::getObjetivo() {
-    return objetivo;
 }
 
 int Curso::getDuracionHoras() {
     return duracionHoras;
 }
 
-string Curso::getNivel() {
-    return nivel;
-}
-
 string Curso::obtenerDescripcion() {
-    return nombre +
-           "  Objetivo: " + objetivo +
-           "  Duracion: " + to_string(duracionHoras) + " horas" +
-           "  Nivel: " + nivel;
+    return "Curso: " + nombre +
+           "  Duracion: " + to_string(duracionHoras) + " horas";
 }
 #endif //UNTITLED4_RUTINA_H
