@@ -1,7 +1,8 @@
 //
 // Created by munoz on 25/05/2026.
 //
-/* Clase Estudiante Esta clase representa al estudiante registrado dentro de la academia.
+/* Clase Estudiante 
+Esta clase representa al estudiante registrado dentro de la academia.
 Hereda de la clase Persona, por lo que reutiliza atributos como nombre, edad y matrícula.
 Relación con otras clases: 
 - Hereda de Persona. 
