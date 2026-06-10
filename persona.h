@@ -19,6 +19,9 @@ estudiantes o profesores.
 El método obtenerResumen() es virtual puro, lo que obliga a las clases hijas
 a implementar su propia versión. Esto permite aplicar polimorfismo en el main.
 */
+//
+// Created by munoz on 21/05/2026.
+//
 #ifndef UNTITLED4_PERSONA_H
 #define UNTITLED4_PERSONA_H
 #include <iostream>
@@ -35,8 +38,7 @@ public:
     Persona();
     Persona(string nombre, int edad, string matricula);
 
-    // Destructor virtual
-    virtual ~Persona() = default;
+    virtual ~Persona();
 
     string getNombre();
     void setNombre(string nombre);
@@ -46,15 +48,23 @@ public:
 
     string getMatricula();
 
-    //Método virtual puro. Obliga a las clases hijas a definir su propio resumen.
     virtual string obtenerResumen() = 0;
 };
 
-Persona::Persona()
-    : nombre(""), edad(0), matricula("") {}
+Persona::Persona() {
+    nombre = "";
+    edad = 0;
+    matricula = "";
+}
 
-Persona::Persona(string nombre, int edad, string matricula)
-    : nombre(nombre), edad(edad), matricula(matricula) {}
+Persona::Persona(string nombre, int edad, string matricula) {
+    this->nombre = nombre;
+    this->edad = edad;
+    this->matricula = matricula;
+}
+
+Persona::~Persona() {
+}
 
 string Persona::getNombre() {
     return nombre;
