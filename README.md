@@ -1,7 +1,7 @@
 # Oak-Language-Academy
 Proyecto Integrador POO
 
-Mi proyecto consiste en un sistema básico para administrar una academia de idiomas. El sistema permite representar estudiantes, profesores, inscripciones y cursos. Utilicé una clase madre llamada Persona, ya que tanto los estudiantes como los profesores comparten datos como nombre, edad y matrícula. A partir de esta clase se crean las clases hijas Estudiante y Profesor.
+Mi proyecto consiste en un sistema básico para una academia de idiomas. El programa permite registrar datos desde consola de un estudiante, un profesor, una inscripción y un curso. Después de capturar la información, el sistema asigna el curso al estudiante por medio del profesor y permite mostrar los datos registrados.
 
 La idea principal del sistema es simular cómo una academia puede registrar estudiantes, asociarlos a una inscripción, asignarles cursos y mostrar información general de las personas que forman parte de la institución.
 
