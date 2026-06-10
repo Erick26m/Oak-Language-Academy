@@ -22,7 +22,6 @@ y sus años de experiencia.
 #include "curso.h"
 #include <iostream>
 #include <string>
-
 using namespace std;
 
 class Profesor : public Persona {
@@ -31,46 +30,63 @@ private:
     int aniosExperiencia;
 
 public:
-    Profesor()
-        : Persona(),
-          idioma("Sin idioma"),
-          aniosExperiencia(0) {}
-
+    Profesor();
     Profesor(string nombre, int edad, string matricula,
-             string idioma, int aniosExperiencia)
-        : Persona(nombre, edad, matricula),
-          idioma(idioma),
-          aniosExperiencia(aniosExperiencia) {}
+             string idioma, int aniosExperiencia);
 
-    ~Profesor() override = default;
+    ~Profesor();
 
-    string getIdioma() {
-        return idioma;
-    }
+    string getIdioma();
+    void setIdioma(string idioma);
 
-    void setIdioma(string idioma) {
-        this->idioma = idioma;
-    }
+    int getAniosExperiencia();
 
-    int getAniosExperiencia() {
-        return aniosExperiencia;
-    }
-// Asigna un curso a un estudiante. Se usa & para modificar al estudiante original.
-    void asignarCurso(Estudiante &estudiante, Curso curso) {
-        estudiante.asignarCurso(curso);
-    }
+    void asignarCurso(Estudiante &estudiante, Curso curso);
+    void asignarCurso(Estudiante &estudiante, string nombreCurso, int duracionHoras);
 
-// Sobrecarga 
-    void asignarCurso(Estudiante &estudiante, string nombreCurso, string objetivoCurso) {
-        estudiante.asignarCurso(nombreCurso, objetivoCurso);
-    }
-
-    string obtenerResumen() override {
-        return "Profesor: " + nombre +
-               "  Matricula: " + matricula +
-               "  Idioma: " + idioma +
-               "  Experiencia: " + to_string(aniosExperiencia) + " anios";
-    }
+    string obtenerResumen();
 };
 
+Profesor::Profesor() : Persona() {
+    idioma = "Sin_idioma";
+    aniosExperiencia = 0;
+}
+
+Profesor::Profesor(string nombre, int edad, string matricula,
+                   string idioma, int aniosExperiencia)
+    : Persona(nombre, edad, matricula) {
+    this->idioma = idioma;
+    this->aniosExperiencia = aniosExperiencia;
+}
+
+Profesor::~Profesor() {
+}
+
+string Profesor::getIdioma() {
+    return idioma;
+}
+
+void Profesor::setIdioma(string idioma) {
+    this->idioma = idioma;
+}
+
+int Profesor::getAniosExperiencia() {
+    return aniosExperiencia;
+}
+
+void Profesor::asignarCurso(Estudiante &estudiante, Curso curso) {
+    estudiante.asignarCurso(curso);
+}
+
+void Profesor::asignarCurso(Estudiante &estudiante, string nombreCurso, int duracionHoras) {
+    estudiante.asignarCurso(nombreCurso, duracionHoras);
+}
+
+string Profesor::obtenerResumen() {
+    return "Profesor: " + nombre +
+           "  Edad: " + to_string(edad) +
+           "  Matricula: " + matricula +
+           "  Idioma: " + idioma +
+           "  Experiencia: " + to_string(aniosExperiencia) + " anios";
+}
 #endif // UNTITLED4_PROFESOR_H
