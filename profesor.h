@@ -1,19 +1,17 @@
 //
 // Created by munoz on 25/05/2026.
 //
-/*
-Clase Profesor
-
-Esta clase representa a los profesores de la academia.
-Hereda de Persona porque un profesor también tiene nombre y edad.
-
-Relación con otras clases:
+/* Clase Profesor 
+Esta clase representa al profesor dentro de la academia. 
+Hereda de la clase Persona, por lo que comparte datos generales como nombre, edad y matrícula. 
+Relación con otras clases: 
 - Hereda de Persona.
-- Se relaciona con Estudiante porque puede asignarle cursos.
-- Se relaciona con Curso porque utiliza objetos Curso para hacer asignaciones.
-
-Esta clase agrega información propia del profesor, como el idioma que enseña
-y sus años de experiencia.
+- Se relaciona con Estudiante porque puede asignarle un curso. 
+- Se relaciona con Curso porque utiliza objetos de tipo Curso para hacer la asignación.
+La clase contiene información propia del profesor, como el idioma que enseña y sus años de experiencia. 
+El método asignarCurso() permite que el profesor asigne un curso a un estudiante. 
+Además, se usa sobrecarga porque existen distintas formas de asignar un curso. 
+También implementa obtenerResumen(), lo que permite aplicar polimorfismo al mostrar la información del profesor desde un apuntador de tipo Persona. 
 */
 #ifndef UNTITLED4_PROFESOR_H
 #define UNTITLED4_PROFESOR_H
