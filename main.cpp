@@ -1,15 +1,9 @@
 /*
-
-En el main se prueban las clases principales.
-Primero se crean objetos de tipo Inscripcion, Curso, Estudiante y Profesor.
-Después, el profesor asigna cursos a los estudiantes.
-
-También se demuestra el uso de polimorfismo usando apuntadores de tipo Persona*.
-Con el método virtual obtenerResumen(), el programa ejecuta la versión
-correcta dependiendo del tipo real del objeto.
-
-Al final se libera la memoria con delete porque los objetos fueron creados
-dinámicamente con new.
+main
+Su responsabilidad es mantener el inicio del sistema lo más simple posible.
+En lugar de crear todos los objetos directamente en el main, se crea un objeto de tipo Academia. 
+La clase Academia se encarga de mostrar el menú, registrar los datos, asignar el curso y mostrar la información.
+Con esta estructura, el código queda más organizado.
 */
 using namespace std;
 #include "academia.h"
