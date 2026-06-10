@@ -1,19 +1,16 @@
 //
 // Created by munoz on 25/05/2026.
 //
-/*
-Clase Inscripcion
-
-Esta clase representa el tipo de inscripción que tiene un estudiante
-dentro de la academia de idiomas.
-
+/* Clase Inscripcion
+Esta clase representa la inscripción del estudiante dentro de la academia.
+Su objetivo es guardar la información del plan de inscripción seleccionado. 
 Relación con otras clases:
-- Estudiante contiene un objeto de tipo Inscripcion.
-- Esto permite que cada estudiante tenga asociado un plan académico,
-  con tipo, costo y duración.
-
-La inscripción se maneja como una clase separada para no guardar esos datos
-directamente dentro de Estudiante y mantener mejor organizada la información.
+- Estudiante tiene una Inscripcion como atributo.
+La clase almacena el tipo de inscripción, el costo y la duración en meses. 
+Estos datos permiten representar el plan académico que tiene el estudiante dentro del sistema.
+En la clase Academia se muestran opciones de inscripción al usuario.
+Después de elegir una opción, se crea un objeto Inscripcion con los datos correspondientes. 
+El método obtenerDescripcion() sirve para regresar la información de la inscripción en forma de texto.
 */
 #ifndef UNTITLED4_INSCRIPCION_H
 #define UNTITLED4_INSCRIPCION_H
