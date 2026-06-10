@@ -1,6 +1,20 @@
 //
 // Created by munoz on 08/06/2026.
 //
+/* Clase Academia 
+Esta clase funciona como la clase controladora del sistema.
+Su objetivo es administrar el flujo principal del programa sin cargar toda la lógica dentro del main. 
+Relación con otras clases:
+- Contiene un Estudiante. 
+- Contiene un Profesor.
+- Contiene un Curso.
+- Usa Inscripcion al momento de registrar los datos del estudiante. 
+- Usa Persona* para aplicar polimorfismo al mostrar la información. 
+La clase Academia muestra un menú en consola para que el usuario pueda interactuar con el sistema. 
+Desde aquí se registran los datos, se selecciona el tipo de inscripción, se crea el curso y se asigna al estudiante por medio del profesor.
+El atributo datosRegistrados permite saber si ya se capturó la información antes de intentar mostrarla.
+Gracias a esta clase, el main queda más limpio, ya que solamente crea un objeto Academia y llama al método iniciar().
+*/
 #ifndef UNTITLED4_ACADEMIA_H
 #define UNTITLED4_ACADEMIA_H
 #include <iostream>
