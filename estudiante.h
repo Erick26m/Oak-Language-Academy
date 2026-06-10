@@ -16,62 +16,49 @@ Relación con otras clases:
 Esta clase agrega información propia del estudiante, como promedio,
 nivel académico y meta académica.
 */
-
-#ifndef UNTITLED4_ESTUDIANTE_H
-#define UNTITLED4_ESTUDIANTE_H
 #include <string>
 #include "persona.h"
 #include "inscripcion.h"
 #include "curso.h"
+#include <iostream>
+
 using namespace std;
 
 class Estudiante : public Persona {
 private:
     float promedio;
-    string nivel;
-    string metaAcademica;
-
     Inscripcion inscripcion;
     Curso curso;
 
 public:
     Estudiante();
+    Estudiante(string nombre, int edad, string matricula,
+               float promedio, Inscripcion inscripcion);
 
-    Estudiante(string nombre, int edad, string matricula, float promedio,
-               string nivel, string metaAcademica, Inscripcion inscripcion);
-
-    ~Estudiante() override = default;
+    ~Estudiante();
 
     float getPromedio();
     void setPromedio(float promedio);
 
-    string getNivel();
-    void setNivel(string nivel);
-
-    string getMetaAcademica();
-    void setMetaAcademica(string metaAcademica);
-
     void asignarCurso(Curso curso);
+    void asignarCurso(string nombreCurso, int duracionHoras);
 
-    // Sobrecarga de metodo
-    void asignarCurso(string nombreCurso, string objetivoCurso);
-
-    string obtenerResumen() override;
+    string obtenerResumen();
 };
 
-Estudiante::Estudiante()
-    : Persona(),
-      promedio(0),
-      nivel("Sin nivel"),
-      metaAcademica("Sin meta academica") {}
+Estudiante::Estudiante() : Persona() {
+    promedio = 0;
+}
 
-Estudiante::Estudiante(string nombre, int edad, string matricula, float promedio,
-                       string nivel, string metaAcademica, Inscripcion inscripcion)
-    : Persona(nombre, edad, matricula),
-      promedio(promedio),
-      nivel(nivel),
-      metaAcademica(metaAcademica),
-      inscripcion(inscripcion) {}
+Estudiante::Estudiante(string nombre, int edad, string matricula,
+                       float promedio, Inscripcion inscripcion)
+    : Persona(nombre, edad, matricula) {
+    this->promedio = promedio;
+    this->inscripcion = inscripcion;
+}
+
+Estudiante::~Estudiante() {
+}
 
 float Estudiante::getPromedio() {
     return promedio;
@@ -81,37 +68,21 @@ void Estudiante::setPromedio(float promedio) {
     this->promedio = promedio;
 }
 
-string Estudiante::getNivel() {
-    return nivel;
-}
-
-void Estudiante::setNivel(string nivel) {
-    this->nivel = nivel;
-}
-
-string Estudiante::getMetaAcademica() {
-    return metaAcademica;
-}
-
-void Estudiante::setMetaAcademica(string metaAcademica) {
-    this->metaAcademica = metaAcademica;
-}
-
 void Estudiante::asignarCurso(Curso curso) {
     this->curso = curso;
 }
 
-void Estudiante::asignarCurso(string nombreCurso, string objetivoCurso) {
-    curso = Curso(nombreCurso, objetivoCurso, 80, nivel);
+void Estudiante::asignarCurso(string nombreCurso, int duracionHoras) {
+    Curso nuevoCurso(nombreCurso, duracionHoras);
+    curso = nuevoCurso;
 }
 
 string Estudiante::obtenerResumen() {
     return "Estudiante: " + nombre +
+           "  Edad: " + to_string(edad) +
            "  Matricula: " + matricula +
-           "  Nivel: " + nivel +
-           "  Promedio: " + to_string(getPromedio()) +
-           "  Meta academica: " + metaAcademica +
-           "  Inscripcion: " + inscripcion.getTipo() +
-           "  Curso: " + curso.getNombre();
+           "  Promedio: " + to_string(promedio) +
+           "  " + inscripcion.obtenerDescripcion() +
+           "  Curso asignado: " + curso.getNombre();
 }
 #endif //UNTITLED4_CLIENTE_H
