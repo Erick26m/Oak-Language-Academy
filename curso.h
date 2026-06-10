@@ -1,18 +1,16 @@
 //
 // Created by munoz on 25/05/2026.
 //
-/*
-Clase Curso
-
-Esta clase representa un curso ofrecido por la academia de idiomas.
-
+/* Clase Curso
+Esta clase representa el curso que será asignado al estudiante.
+El curso almacena la información principal: nombre del curso y duración en horas.
 Relación con otras clases:
-- Estudiante tiene un curso asignado.
-- Profesor puede asignar cursos a estudiantes.
+- Estudiante tiene un Curso asignado.
+- Profesor usa Curso para asignarlo a un estudiante. 
+- Academia contiene un Curso para administrar el flujo del programa. 
+La clase Curso permite organizar la información del curso de forma separada.
+ */
 
-Lo separe en una clase propia porque un curso tiene información específica,
-como nombre, objetivo, duración y nivel.
-*/
 #ifndef UNTITLED4_CURSO_H
 #define UNTITLED4_CURSO_H
 #include <iostream>
