@@ -34,15 +34,21 @@ public:
     string getTipo();
     float getCosto();
     int getDuracionMeses();
-// Genera una descripción en texto de la inscripción.
+
     string obtenerDescripcion();
 };
 
-Inscripcion::Inscripcion()
-    : tipo("Sin inscripcion"), costo(0), duracionMeses(0) {}
+Inscripcion::Inscripcion() {
+    tipo = "Sin_inscripcion";
+    costo = 0;
+    duracionMeses = 0;
+}
 
-Inscripcion::Inscripcion(string tipo, float costo, int duracionMeses)
-    : tipo(tipo), costo(costo), duracionMeses(duracionMeses) {}
+Inscripcion::Inscripcion(string tipo, float costo, int duracionMeses) {
+    this->tipo = tipo;
+    this->costo = costo;
+    this->duracionMeses = duracionMeses;
+}
 
 string Inscripcion::getTipo() {
     return tipo;
@@ -57,8 +63,8 @@ int Inscripcion::getDuracionMeses() {
 }
 
 string Inscripcion::obtenerDescripcion() {
-    return tipo +
-           "  Costo: $" + to_string(costo) +
+    return "Inscripcion: " + tipo +
+           "  Costo: " + to_string(costo) +
            "  Duracion: " + to_string(duracionMeses) + " meses";
 }
 #endif //UNTITLED4_MEMBRESIA_H
