@@ -3,7 +3,7 @@
 //
 /* Clase Academia 
 Esta clase funciona como la clase controladora del sistema.
-Su objetivo es administrar el flujo principal del programa sin cargar toda la lógica dentro del main. 
+Su objetivo es administrar el flujo principal del programa. 
 Relación con otras clases:
 - Contiene un Estudiante. 
 - Contiene un Profesor.
