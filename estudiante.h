@@ -83,11 +83,11 @@ void Estudiante::asignarCurso(string nombreCurso, int duracionHoras) {
 
 string Estudiante::obtenerResumen() {
     return "Estudiante: " + nombre +
-           " | Edad: " + to_string(edad) +
-           " | Matricula: " + matricula +
-           " | Promedio: " + to_string(promedio) +
-           " | " + inscripcion.obtenerDescripcion() +
-           " | Curso asignado: " + curso.getNombre();
+           "  Edad: " + to_string(edad) +
+           "  Matricula: " + matricula +
+           "  Promedio: " + to_string(promedio) +
+           "  " + inscripcion.obtenerDescripcion() +
+           "  Curso asignado: " + curso.getNombre();
 }
 
 #endif
