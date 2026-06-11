@@ -3,7 +3,6 @@
 //
 /* Clase Inscripcion
 Esta clase representa la inscripción del estudiante dentro de la academia.
-Su objetivo es guardar la información del plan de inscripción seleccionado. 
 Relación con otras clases:
 - Estudiante tiene una Inscripcion como atributo.
 La clase almacena el tipo de inscripción, el costo y la duración en meses. 
